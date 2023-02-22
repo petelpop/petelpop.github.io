@@ -19,3 +19,13 @@ hamburger.addEventListener('click', function(){
   hamburger.classList.toggle('hamburger-active');
   navMenu.classList.toggle('hidden');
 })
+
+function showLoader() {
+  const loader = document.querySelector('#loader');
+  loader.style.display = 'block';
+}
+
+function hideLoader() {
+  const loader = document.querySelector('#loader');
+  loader.style.display = 'none';
+}
