@@ -21,11 +21,11 @@ hamburger.addEventListener('click', function(){
 })
 
 function showLoader() {
-  const loader = document.querySelector('#loader');
+  const loader = document.querySelector('.loader');
   loader.style.display = 'block';
 }
 
 function hideLoader() {
-  const loader = document.querySelector('#loader');
+  const loader = document.querySelector('.loader');
   loader.style.display = 'none';
 }
