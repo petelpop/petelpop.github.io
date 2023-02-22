@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="dist/img/ipalico.ico">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>my portfolio</title>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -17,10 +18,16 @@
 
 <body>
   
+  <!-- loader -->
   <div class="loader" id="loader">
-    <span class="loader-text">loading</span>
-      <span class="load"></span>
-  </div>
+  <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+    <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+    <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+    <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+    <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+  </svg>
+</div>
+  <!-- end loader -->
 
   <!-- header start -->
   <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
@@ -328,9 +335,21 @@
   <!-- footer end -->
 
   <script src="dist/js/script.js"> </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+  <script type="text/javascript">
     AOS.init();
+
+    $(document).ready(function() {
+  // Menampilkan loader saat halaman dimuat
+  $("#loader").show();
+
+  // Kode untuk memuat data di sini
+
+  // Menyembunyikan loader setelah proses loading selesai
+  $("#loader").hide();
+});
   </script>
 </body>
 
